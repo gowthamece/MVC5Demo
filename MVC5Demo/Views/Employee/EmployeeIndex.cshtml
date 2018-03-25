@@ -1,0 +1,41 @@
+﻿@model MVC5Demo.Models.Employee
+
+@{
+    ViewBag.Title = "EmployeeIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>EmployeeIndex</h2>
+<h4> Registration Form </h4>
+<div id="registration">
+    @using (Html.BeginForm("AddEmployee", "Employee", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.Label("FirstName")
+        @Html.TextBoxFor(m => m.FirstName)
+        @Html.ValidationMessageFor(m => m.FirstName)
+        <br />
+        @Html.Label("LastName")
+        @Html.TextBoxFor(m => m.LastName)
+        <br />
+        @Html.Label("Age")
+        @Html.TextBoxFor(m => m.Age)
+        <br />
+        @Html.Label("Email")
+        @Html.TextBoxFor(m => m.Email)
+        @Html.ValidationMessageFor(m => m.Email)
+        <br />
+        @Html.Label("Password")
+        @Html.PasswordFor(m => m.Password)
+        @Html.ValidationMessageFor(m => m.Password)
+        <br />
+        @Html.Label("CofirmaPassword")
+        @Html.PasswordFor(m => m.ConfirmPassword)
+        @Html.ValidationMessageFor(m => m.ConfirmPassword)
+        <br />
+        <div>
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    }
+</div>
+
