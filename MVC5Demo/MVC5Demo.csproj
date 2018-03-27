@@ -139,6 +139,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionFilters\LogActionFilter.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -189,6 +190,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Employee\EmployeeIndex.cshtml" />
     <Content Include="Views\Employee\AddEmployee_Success.cshtml" />
+    <Content Include="Views\Shared\_HeaderNavBar.cshtml" />
+    <Content Include="Views\Employee\Demo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
