@@ -192,6 +192,7 @@
     <Content Include="Views\Employee\AddEmployee_Success.cshtml" />
     <Content Include="Views\Shared\_HeaderNavBar.cshtml" />
     <Content Include="Views\Employee\Demo.cshtml" />
+    <Content Include="Views\Employee\ViewIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

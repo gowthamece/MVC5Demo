@@ -21,6 +21,18 @@ namespace MVC5Demo.Controllers
             return View("EmployeeIndex",employee);
         }
 
+        public ActionResult ViewIndex()
+        {
+            List<Employee> employees = new List<Employee>();
+            employees.Add(new Employee { FirstName = "Arun", LastName = "Raj" });
+            employees.Add(new Employee { FirstName = "Pradeep", LastName = "Kumar" });
+            ViewData["Employee"] = employees;
+            ViewBag.Employee = employees;
+            TempData["Emp"] = employees;
+            return View();
+         }
+       
+
         [HttpPost]
         public ActionResult AddEmployee(Employee employee)
         {
